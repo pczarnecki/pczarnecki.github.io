@@ -22,7 +22,7 @@
     right: 10%;
     width: 80%;
 
-    min-width: 600px;
+    min-width: 80%;
     border-radius: 5px;
 
 }
@@ -40,7 +40,7 @@
     right: 10%;
     width: 80%;
 
-    min-width: 900px;
+    min-width: 80%;
     border-radius: 5px;
 
 }
@@ -104,9 +104,12 @@
     font-size: 16pt;
     max-width: fit-content;
     max-height: fit-content;
+    min-height: fit-content;
     line-height: 120%;
     text-align: justify;
     bottom: 0;
+
+
 }
 
 .text2 {
