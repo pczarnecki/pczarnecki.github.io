@@ -103,6 +103,7 @@
     font-family: Perpetua,Baskerville,Big Caslon,Palatino Linotype,Palatino,URW Palladio L,Nimbus Roman No9 L,serif;
     font-size: 16pt;
     max-width: fit-content;
+    max-height: fit-content;
     line-height: 120%;
     text-align: justify;
     bottom: 0;
