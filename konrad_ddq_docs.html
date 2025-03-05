@@ -15444,7 +15444,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>There are a few requirements to running ARTS, both line-by-line and with the quadrature scheme: <br></p>
 <ul>
-<li>pyARTS version 2.5.11 was used to implement ARTS/quadrature in konrad.</li>
+<li>pyARTS version 2.5.11 was used to implement ARTS/quadrature in konrad. However all functions should work with pyARTS version 2.4. Find the conda environment file <a href = konrad_arts24.yml> here</a>.</li>
 <li>Lookup tables to the ARTS line-by-line calculation must be provided. This can be accomplished by running the following in the command line before activating the python environment: <br>
 <code>export KONRAD_LOOKUP_TABLE_LW='/path/to/abs_lookup_lw.xml'</code> <br>
 <code>export KONRAD_LOOKUP_TABLE_SW='/path/to/abs_lookup_sw.xml'</code> <br>
@@ -15452,13 +15452,14 @@ An example longwave lookup table can be found at <a href="https://doi.org/10.528
 <li>The path to the ARTS catalogue must be provided. This can be accomplished by running the following line in Python before importing ARTS or konrad: <br>
 <code>import os</code> <br>
 <code>os.environ['ARTS_DATA_PATH'] = '/path/to/arts-cat-data/' </code> <br>
+The konrad lookup tables can be similarly included. <br>
 The catalogue must include:<ul>
 <li>line data (in a folder called <code>lines</code>)</li>
 <li>cross-section induced absorption (CIA) data (with the path <code>cia-xml/hitran2011/hitran_cia2012_adapted.xml.gz</code>)</li>
 <li>cross-section data (in a folder called <code>xsec</code>)</li>
 <li>MT_CKD 4.0 water vapor contiuum data (with the path <code>model/mt_ckd_4.0/H2O.xml</code>)</li>
 <li>the 2008 July solar spectrum for the shortwave (with the path <code>arts-xml-data/star/Sun/solar_spectrum_July_2008_konrad_scale.xml</code>). <br>
-Most of these can be found in the arts-cat-data repository. In particular, ozone cross-sections must be provided for the shortwave to work correctly. <br></li>
+Most of these can be found in the arts-cat-data repository (<a href="https://arts.mi.uni-hamburg.de/svn/rt/arts-cat-data/branches/">https://arts.mi.uni-hamburg.de/svn/rt/arts-cat-data/branches/</a>). In particular, ozone cross-sections must be provided for the shortwave to work correctly. <br></li>
 </ul>
 </li>
 </ul>
